@@ -4,14 +4,15 @@
  </head>
  <body>
  <?php 
+ echo "HERE!";
 $errors = '';
-$myemail = 'luke@paireepinart.com';//<-----Put Your email address here.
-if(empty($_POST['name'])  || 
-   empty($_POST['guests']) || 
-   empty($_POST['food']))
-{
-    echo "Whoops! please fill out required fields. click <a href="/">here</a> to go back and try again.";
-}
+//$myemail = 'luke@paireepinart.com';//<-----Put Your email address here.
+//if(empty($_POST['name'])  || 
+//   empty($_POST['guests']) || 
+//   empty($_POST['food']))
+//{
+//    echo "Whoops! please fill out required fields. click <a href="/">here</a> to go back and try again.";
+//}
  
 $name = $_POST['name']; 
 $guests = $_POST['guests']; 
@@ -29,7 +30,7 @@ $email_body = "-----------------\nYou have received a new response to your invit
 "    Food: $food\n".
 "    Comments: $comments\n-------------\n";
  echo "$_SERVER['DOCUMENT_ROOT']/responses.txt";
- file_put_contents("$_SERVER['DOCUMENT_ROOT']/responses.txt", $email_body, FILE_APPEND)
+ file_put_contents("$_SERVER['DOCUMENT_ROOT']/responses.txt", $email_body, FILE_APPEND);
 //$headers = "From: $myemail\n";
  
 //$headers .= "Reply-To: $email_address";
