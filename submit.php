@@ -4,6 +4,9 @@
  </head>
  <body>
  <?php 
+ error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
  echo "HERE!";
 //$errors = '';
 //$myemail = 'luke@paireepinart.com';//<-----Put Your email address here.
