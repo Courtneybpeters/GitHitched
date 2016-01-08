@@ -11,7 +11,6 @@ if(empty($_POST['name'])  ||
    empty($_POST['food']))
 {
     echo "Whoops! please fill out required fields. click <a href="/">here</a> to go back and try again.";
-	$errors = "asdf";
 }
  
 $name = $_POST['name']; 
@@ -29,8 +28,8 @@ $email_body = "-----------------\nYou have received a new response to your invit
 "    Guests: $guests\n".
 "    Food: $food\n".
 "    Comments: $comments\n-------------\n";
- 
- file_put_contents("responses.txt", $email_body, FILE_APPEND)
+ echo "$_SERVER['DOCUMENT_ROOT']/responses.txt";
+ file_put_contents("$_SERVER['DOCUMENT_ROOT']/responses.txt", $email_body, FILE_APPEND)
 //$headers = "From: $myemail\n";
  
 //$headers .= "Reply-To: $email_address";
