@@ -1,24 +1,54 @@
-#wrapper 
+body
 {
-	width: 1000px; margin: 0 auto;
+	background-color: rgba(255, 153, 102, .5);
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-size: 1.8em;
+	margin: 0;
+	padding: 0;
+	width: 100%;
 }
 
 .title
 {
-	margin-bottom: 10px;
 	font-family: 'Playfair Display', serif;
+}
+
+#page-title
+{
+	margin: 80px 0px;
 }
 
 .section
 {
-	padding-bottom: 30px;
+	margin: 100px 0px;
 }
 
-body 
-{
-	background-color: #FF9966;
-	text-align: center;
-	font-family: 'Raleway', sans-serif;
-	font-size: 1.8em;
+form {
+	margin: 0 auto;
+	width: 500px;
+	padding: 1em;
+	border: 2px solid;
+	border-radius: 1em;
+	margin-top: 1em;
 }
 
+label {
+	display: inline-block;
+	width: 200px;
+	text-align: right;
+}
+
+input, textarea {
+    font: 1em sans-serif;
+    width: 300px;
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+ textarea {
+	vertical-align: top;
+	height: 5em;
+	resize: vertical;
+    margin-top: 1em;
+}
