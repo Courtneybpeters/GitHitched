@@ -11,6 +11,7 @@ if(empty($_POST['name'])  ||
    empty($_POST['food']))
 {
     echo "Whoops! please fill out required fields. click <a href="/">here</a> to go back and try again.";
+	$errors = "asdf";
 }
  
 $name = $_POST['name']; 
@@ -20,23 +21,21 @@ $comments = $_POST['comments'];
  
 if( empty($errors))
 {
- 
-$to = $myemail;
- 
 $email_subject = "Wedding form submission: $name";
  
-$email_body = "You have received a new response to your invitation!\n\n".
+$email_body = "-----------------\nYou have received a new response to your invitation!\n\n".
 "Here are the details:\n".
 "    Name: $name\n".
 "    Guests: $guests\n".
 "    Food: $food\n".
-"    Comments: $comments\n";
+"    Comments: $comments\n-------------\n";
  
-$headers = "From: $myemail\n";
+ file_put_contents("responses.txt", $email_body, FILE_APPEND)
+//$headers = "From: $myemail\n";
  
 //$headers .= "Reply-To: $email_address";
  
-mail($to,$email_subject,$email_body,$headers);
+//mail($to,$email_subject,$email_body,$headers);
  
 //redirect to the 'thank you' page
  
