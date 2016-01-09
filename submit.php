@@ -7,7 +7,6 @@
  error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
- echo "HERE!";
 //$errors = '';
 //$myemail = 'luke@paireepinart.com';//<-----Put Your email address here.
 //if(empty($_POST['name'])  || 
@@ -17,11 +16,13 @@ ini_set('display_errors', '1');
 //    echo "Whoops! please fill out required fields. click <a href="/">here</a> to go back and try again.";
 //}
  
-//$name = $_POST['name']; 
-//$guests = $_POST['guests']; 
-//$food = $_POST['food']; 
-//$comments = $_POST['comments']; 
+$name = $_POST['name']; 
+$guests = $_POST['guests']; 
+$food = $_POST['food']; 
+$comments = $_POST['comments']; 
  
+echo "HERE!";
+
 //if( empty($errors))
 //{
 //$email_subject = "Wedding form submission: $name";
