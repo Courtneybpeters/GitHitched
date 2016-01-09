@@ -26,7 +26,7 @@ $information = "-----------------\nYou have received a new response to your invi
 "    Comments: $comments\n-------------\n";
 $docRoot = $_SERVER['DOCUMENT_ROOT'];
 echo $docRoot;
-file_put_contents($docRoot."/responses.txt", $email_body, FILE_APPEND);
+file_put_contents($docRoot."/responses.txt", $information, FILE_APPEND);
 //$headers = "From: $myemail\n";
  
 //$headers .= "Reply-To: $email_address";
