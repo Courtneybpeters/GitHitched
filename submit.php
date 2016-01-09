@@ -19,7 +19,7 @@ ini_set('display_errors', '1');
 $name = isset($_POST['name']) ? $_POST['name'] : 'No Name'; 
 $guests =  isset($_POST['guests']) ? $_POST['guests'] : 'No Guests'; 
 $food = isset($_POST['food']) ? $_POST['food'] : 'No Food'; 
-$comments = isset($_POST['comments'] ? $_POST['comments'] : 'No Comments'; 
+$comments = isset($_POST['comments']) ? $_POST['comments'] : 'No Comments'; 
  
 echo $name;
 
