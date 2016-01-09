@@ -17,13 +17,13 @@ ini_set('display_errors', '1');
 //    echo "Whoops! please fill out required fields. click <a href="/">here</a> to go back and try again.";
 //}
  
-$name = $_POST['name']; 
-$guests = $_POST['guests']; 
-$food = $_POST['food']; 
-$comments = $_POST['comments']; 
+//$name = $_POST['name']; 
+//$guests = $_POST['guests']; 
+//$food = $_POST['food']; 
+//$comments = $_POST['comments']; 
  
-if( empty($errors))
-{
+//if( empty($errors))
+//{
 //$email_subject = "Wedding form submission: $name";
  /*
 $email_body = "-----------------\nYou have received a new response to your invitation!\n\n".
@@ -32,7 +32,7 @@ $email_body = "-----------------\nYou have received a new response to your invit
 "    Guests: $guests\n".
 "    Food: $food\n".
 "    Comments: $comments\n-------------\n";*/
- echo "$_SERVER['DOCUMENT_ROOT']/responses.txt";
+ //echo "$_SERVER['DOCUMENT_ROOT']/responses.txt";
  //file_put_contents("$_SERVER['DOCUMENT_ROOT']/responses.txt", $email_body, FILE_APPEND);
 //$headers = "From: $myemail\n";
  
@@ -43,7 +43,7 @@ $email_body = "-----------------\nYou have received a new response to your invit
 //redirect to the 'thank you' page
  
 //header('Location: thanks.html');
-}
+//}
  ?> 
  </body>
 </html>
