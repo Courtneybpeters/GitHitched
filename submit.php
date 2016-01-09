@@ -16,11 +16,19 @@ ini_set('display_errors', '1');
 //    echo "Whoops! please fill out required fields. click <a href="/">here</a> to go back and try again.";
 //}
  
-$name = $_POST['name']; 
-$guests = $_POST['guests']; 
-$food = $_POST['food']; 
-$comments = $_POST['comments']; 
+$name = isset($_POST['name']) ? $_POST['name'] : 'No Name'; 
+$guests =  isset($_POST['guests']) ? $_POST['guests'] : 'No Guests'; 
+$food = isset($_POST['food']) ? $_POST['food'] : 'No Food'; 
+$comments = isset($_POST['comments'] ? $_POST['comments'] : 'No Comments'; 
  
+echo $name;
+
+echo $guests;
+
+echo $food;
+
+echo $comments;
+
 echo "HERE!";
 
 //if( empty($errors))
