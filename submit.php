@@ -13,19 +13,18 @@ $guests =  isset($_POST['guests']) ? $_POST['guests'] : 'No Guests';
 $food = isset($_POST['food']) ? $_POST['food'] : 'No Food'; 
 $comments = isset($_POST['comments']) ? $_POST['comments'] : 'No Comments'; 
  
-// echo $name;
-// echo $guests;
-// echo $food;
-// echo $comments;
-// echo "HERE!";
-$information = "-----------------\nYou have received a new response to your invitation!\n\n".
-"Here are the details:\n".
-"    Name: $name\n".
-"    Guests: $guests\n".
-"    Food: $food\n".
-"    Comments: $comments\n-------------\n";
+$information = "-----------------\r\nYou have received a new response to your invitation!\r\n\r\n".
+"Here are the details:\r\n".
+"    Name: $name\r\n".
+"    Guests: $guests\r\n".
+"    Food: $food\r\n".
+"    Comments: $comments\r\n-------------\r\n";
 $docRoot = $_SERVER['DOCUMENT_ROOT'];
 file_put_contents($docRoot."/responses.txt", $information, FILE_APPEND);
+
+$csvFile = fopen("responses.csv", "a");
+fputcsv($csvFile, [$name, $guests, $food, $comments]);
+fclose($csvFile);
 
 //redirect to the 'thank you' page
 header('Location: thanks.html');
