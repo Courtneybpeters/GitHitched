@@ -27,16 +27,19 @@ body
 form {
 	margin: 0 auto;
 	width: 500px;
-	padding: 1em;
+	padding: 1.3em;
 	border: 2px solid;
 	border-radius: 1em;
 	margin-top: 1em;
+	margin-bottom: 300px;
+	text-align: center;
 }
 
 label {
 	display: inline-block;
 	width: 500px;
 	text-align: left;
+	font-weight: bold;
 }
 
 input, textarea {
@@ -46,9 +49,41 @@ input, textarea {
     border: 1px solid #999;
 }
 
- textarea {
+textarea {
 	vertical-align: top;
 	height: 5em;
 	resize: vertical;
-    margin-top: 1em;
+    margin-top: .5em;
 }
+
+.formelement {
+	text-align: left;
+	padding: 15px;
+}
+
+.checkbox {
+	width: 40px;
+}
+
+.checkboxtxt {
+	font-size: .75em;
+}
+
+.imagediv {
+	margin: 0 auto;
+	width: 1000px;
+	height: 250;
+	border: solid;
+	border-width: 4px;
+	border-radius: 10px;
+	border-color: #FFFFFF;
+}
+
+.image {
+	padding: 20px;
+	width: 200px;
+	height: 200px;
+}
+
+
+

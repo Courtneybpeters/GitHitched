@@ -4,46 +4,31 @@
  </head>
  <body>
  <?php 
- error_reporting(E_ALL);
+
+error_reporting(E_ALL);
 ini_set('display_errors', '1');
 
- echo "HERE!";
-//$errors = '';
-//$myemail = 'luke@paireepinart.com';//<-----Put Your email address here.
-//if(empty($_POST['name'])  || 
-//   empty($_POST['guests']) || 
-//   empty($_POST['food']))
-//{
-//    echo "Whoops! please fill out required fields. click <a href="/">here</a> to go back and try again.";
-//}
+$name = isset($_POST['name']) ? $_POST['name'] : 'No Name'; 
+$guests =  isset($_POST['guests']) ? $_POST['guests'] : 'No Guests'; 
+$food = isset($_POST['food']) ? $_POST['food'] : 'No Food'; 
+$comments = isset($_POST['comments']) ? $_POST['comments'] : 'No Comments'; 
  
-$name = $_POST['name']; 
-$guests = $_POST['guests']; 
-$food = $_POST['food']; 
-$comments = $_POST['comments']; 
- 
-if( empty($errors))
-{
-//$email_subject = "Wedding form submission: $name";
- /*
-$email_body = "-----------------\nYou have received a new response to your invitation!\n\n".
-"Here are the details:\n".
-"    Name: $name\n".
-"    Guests: $guests\n".
-"    Food: $food\n".
-"    Comments: $comments\n-------------\n";*/
- echo "$_SERVER['DOCUMENT_ROOT']/responses.txt";
- //file_put_contents("$_SERVER['DOCUMENT_ROOT']/responses.txt", $email_body, FILE_APPEND);
-//$headers = "From: $myemail\n";
- 
-//$headers .= "Reply-To: $email_address";
- 
-//mail($to,$email_subject,$email_body,$headers);
- 
+$information = "-----------------\r\nYou have received a new response to your invitation!\r\n\r\n".
+"Here are the details:\r\n".
+"    Name: $name\r\n".
+"    Guests: $guests\r\n".
+"    Food: $food\r\n".
+"    Comments: $comments\r\n-------------\r\n";
+$docRoot = $_SERVER['DOCUMENT_ROOT'];
+file_put_contents($docRoot."/responses.txt", $information, FILE_APPEND);
+
+$csvFile = fopen("responses.csv", "a");
+fputcsv($csvFile, [$name, $guests, $food, $comments]);
+fclose($csvFile);
+
 //redirect to the 'thank you' page
- 
-//header('Location: thanks.html');
-}
+header('Location: thanks.html');
+
  ?> 
  </body>
 </html>

@@ -28,7 +28,7 @@
 			<p>(No worries, the reception is where all the fun will be had anyway. And food.)</p>
 			<br><p><b>Reception</b>: 166 Sloan Rd. Buda, TX 78610</p>
 			<p>Whew, there. Invites are officially out and you have been cordially invited.</p>
-			<p>But here's some more information if you want it. Yeah, you should read it.</p>
+			<p>But here's some more information if you want it. And an RSVP. Yeah... you should read it.</p>
 		</div>
 	</div>
 	<div class="section">
@@ -39,7 +39,13 @@
 
 		<p>But soon a wrench was thrown in their plans: Luke was moving back to Wimberley soon! ***Interesting sidenote: Luke and Courtney were both born in Carrollton but Luke soon moved to Wimberley for most of his life yet they somehow met again 20 years later back in Dallas! Pretty positive we fell in love at first sight as kids.*** All it took was a trip down to the beautiful hill country and Courtney was sold. Six months after meeting, Luke and Courtney left the city and started building an incredible life in Austin where they couldn't be happier.</p>
 
-		<p>Besides the two of us, we also have quite an extensive fur-baby pack. Peter was the OG until 2012 when we adopted Lucy on the Mayan Apocalypse (no seriously, our shelter was running a promo thanks to it.) After we bought our house earlier this year, Caterpie (its a Pokemon reference) aka Cat R. P. (P for Peters/Paireepinart) aka Our Third Dog joined the crew. We love our very beautiful life as a little family so come celebrate it with us!</p>
+		<p>Besides the two of us, we also have quite an extensive fur-baby pack. Peter was the OG until 2012 when we adopted Lucy on the Mayan Apocalypse (no seriously, our shelter was running a promo thanks to it.) After we bought our house earlier this year, Caterpie (its a Pokemon reference) aka Cat R. P. (Cat Robert Pawson - Fight Club anyone?) aka Our Third Dog joined the crew. We love our very beautiful life as a little family so come celebrate it with us!</p>
+	</div>
+	<div class="imagediv">
+		<img class="image" src="assets/images/cuties.jpg">
+		<img class="image" src="assets/images/peter.jpg">
+		<img class="image" src="assets/images/lucycuddles.jpg">
+		<img class="image" src="assets/images/catrp300crop.jpg">
 	</div>
 	<div class="section">
 		<div class="title">
@@ -47,10 +53,12 @@
 		</div>
 		<p>It was supposed to be a lazy Sunday after a tiring day trip to Dallas the day before. Courtney was lounging pretty hard, to the point she even busted out
 		a puzzle (It was a risky move for Luke, Courtney had been known to go pretty hard at puzzles and there was nothing on her schedule that day.) Thankfully, Luke planted the
-		seed in Courtney's head of a nice evening of exploring Wimberley with our cameras followed by a "nice dinner, maybe." Soon they got ready and headed out to one of their favorite spots, a place that first wowed Courtney on her first trip to the Hill Country: Fulton Rd. Eventually they hit their favorite spot and decided to set
+		seed in Courtney's head of a nice evening of exploring Wimberley with our cameras followed by a "nice dinner, maybe."</p>
+
+		<p>Soon they got ready and headed out to one of their favorite spots, a place that first wowed Courtney on her first trip to the Hill Country: Fulton Rd. Eventually they hit their favorite spot and decided to set
 		up a tripod to snap some pictures together. Luke had Courtney stand majestically on a rock and pointed the camera towards her and the beautiful sunset quickly settling below the horizon.
 		After snapping a few photos, Luke fiddled with the camera for an unusually long time, Courtney was starting to wonder. Nervous and excited, eventually he came over, kneeled
-		down and among the beautiful quiet country asked her to spend the rest of her life with him! And since you're reading this, SPOILER ALERT! She said yes.</p>
+		down and among the beautiful quiet country asked her to spend the rest of her life with him! And since you're reading this, SPOILER ALERT!</p>
 	</div>
 	<div class="section">
 		<div class="title">
@@ -93,21 +101,29 @@
 		<div class="title">
 			<h3>RSVP</h3>
 		</div>
-		<div class="forminput">
+		<div class="formelement">
 			<label for="name">First &amp; Last Name</label>
-			<input type="text" id="name" required />
+			<input type="text" id="name" name="name" required />
 		</div>
-		<div class="forminput">
-			<label for="guests">Guests</label>
-			<input type="text" id="guests" required>
+		<div class="formelement">
+			<label for="guests">Guests Attending Reception</label>
+			<input  class="checkbox" type="number" id="guests" name="guests" min="0" required />
 		</div>
-		<div class="forminput">
+		<div class="formelement">
+			<label for="brunch">Guests Attending brunch</label>
+			<input class="checkbox" type="number" name="brunch" value="Attending" min="0" required/>
+		</div>
+		<div class="formelement">
+			<label for="superbowl">Guests Attending Super Bowl party</label>
+			<input class="checkbox" type="number" name="superbowl" value="Attending" min="0" required/>
+		</div>
+		<div class="formelement">
 			<label for="food">Food Preferences/Allergies (if any)</label>
-			<textarea id="food"></textarea>
+			<textarea id="food" name="food"></textarea>
 		</div>
-		<div class="forminput">
+		<div class="formelement">
 			<label for="comments">General Comments &amp; Congratulations</label>
-			<textarea id="comments"></textarea>
+			<textarea id="comments" name="comments"></textarea>
 		</div>
 		<div>
 			<button type="submit">Submit</button>
