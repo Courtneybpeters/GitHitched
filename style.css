@@ -85,5 +85,17 @@ textarea {
 	height: 200px;
 }
 
+#chapelmap {
+	margin: 0 auto;
+	width: 500px;
+	height: 400px;
+}
+
+#housemap {
+	margin: 0 auto;
+	width: 500px;
+	height: 400px;
+}
+
 
 

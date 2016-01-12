@@ -5,6 +5,36 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,900' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script type="text/javascript">
+		function initialize() {
+			var chapelLatLng = {lat: 30.144733, lng: -97.969268};
+			var houseLatLng = {lat: 30.038959, lng: -97.814765};
+			var chapelCanvas = document.getElementById('chapelmap');
+			var houseCanvas = document.getElementById('housemap');
+			var chapelMapOpt = {
+				center: chapelLatLng,
+				zoom: 8
+			};
+			var houseMapOpt = {
+				center: houseLatLng,
+				zoom: 8
+			};
+			var chapelMap = new google.maps.Map(chapelCanvas, chapelMapOpt);
+			var houseMap = new google.maps.Map(houseCanvas, houseMapOpt);
+			var chapelMarker = new google.maps.Marker({
+				position: chapelLatLng,
+				map: chapelMap,
+				title: "Chapel Dulcinea"
+			});
+			var houseMarker = new google.maps.Marker({
+			position: houseLatLng,
+			map: houseMap,
+			title: "Reception - Our House"
+			});
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
 </head>
 <body>
 	<!-- TODO: I have a section over another section... -->
@@ -22,11 +52,11 @@
 		<div class="title">
 			<h3>WHERE: </h3>
 		</div>
-		<!-- TODO: ONLY SHOW CEREMONY IF PERSON IS INVITED -->
 			<p><b>Ceremony</b>: Chapel Dulcinea</p>
-			<p>***Due to ceremony location space restraints, ceremony is <em>family only</em>.</p>
-			<p>(No worries, the reception is where all the fun will be had anyway. And food.)</p>
+			<div id="chapelmap"></div>
+
 			<br><p><b>Reception</b>: 166 Sloan Rd. Buda, TX 78610</p>
+			<div id="housemap"></div>
 			<p>Whew, there. Invites are officially out and you have been cordially invited.</p>
 			<p>But here's some more information if you want it. And an RSVP. Yeah... you should read it.</p>
 		</div>
@@ -65,6 +95,10 @@
 			<h3>THE CEREMONY</h3>
 		</div>
 		<p>The intimate ceremony will be held at Chapel Dulcinea at 3:30pm on Saturday, the 6th of February 2016. Due to limited seating, only family will be able to attend.</p>
+
+		<div id="chapelmap">
+
+		</div>
 
 		<div class="title">
 			<h3>THE RECEPTION</h3>
